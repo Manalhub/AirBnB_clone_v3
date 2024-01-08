@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """
+index.py to connect to api
 Flask route that returns json status response
 """
 from api.v1.views import app_views
@@ -33,5 +34,5 @@ def stats():
             "User": "users"
         }
         for key, value in PLURALS.items():
-            response[value] = storage.count(key)
+                response[value] = storage.count(key)
         return jsonify(response)
