@@ -1,5 +1,19 @@
 #!/usr/bin/python3
-"""app.py to connect to API"""
+"""
+app.py - Main module for the AirBnB API.
+
+This module initializes and runs the Flask application, sets up global error handling,
+and defines the main entry point for starting the API server.
+
+Usage:
+- Run this module to start the Flask application.
+
+Environment Variables:
+- HBNB_API_HOST: The host for the API server (default: 0.0.0.0).
+- HBNB_API_PORT: The port for the API server (default: 5000).
+
+Note: Make sure to set the required environment variables before running the module.
+"""
 
 from api.v1.views import app_views
 from flask import Flask, jsonify, make_response, render_template, url_for
