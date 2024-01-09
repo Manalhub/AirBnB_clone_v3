@@ -38,8 +38,7 @@ port = os.getenv('HBNB_API_PORT', 5000)
 cors = CORS(app, resources={r'/*': {'origins': host}})
 
 # app_views BluePrint defined in api.v1.views
-app.register_blueprint(app_views)
-
+app.register_blueprint(app_views, url_prefix="/api/v1")
 
 # begin flask page rendering
 @app.teardown_appcontext
